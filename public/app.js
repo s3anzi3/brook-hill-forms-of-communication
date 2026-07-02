@@ -221,18 +221,6 @@
     'Dribble a basketball',
     'Pump up a ball',
   ];
-  const R3_TASKS = [
-    'Get Sean to make a paper airplane and throw it in the trash.',
-    'Get Sean to draw a house with a sun, a tree, and a dog.',
-    'Get Sean to build a 3-cup stack, then knock it down.',
-    'Get Sean to do 3 jumping jacks, spin once, then sit down.',
-    'Get Sean to draw a smiley face on the whiteboard.',
-    'Get Sean to put on a jacket and zip it all the way up.',
-    'Get Sean to stack 5 objects tallest to shortest.',
-    'Get Sean to walk to the door, knock twice, and come back.',
-    'Get Sean to make the letter "B" out of objects on the table.',
-    'Get Sean to pour a cup of water and take one sip.',
-  ];
   function pick(arr, out, caption) {
     const v = arr[Math.floor(Math.random() * arr.length)];
     out.hidden = false;
@@ -240,8 +228,6 @@
   }
   document.getElementById('r1Prompt').addEventListener('click', () =>
     pick(R1_WORDS, document.getElementById('r1PromptOut'), 'keep it secret from the guessers!'));
-  document.getElementById('r3Prompt').addEventListener('click', () =>
-    pick(R3_TASKS, document.getElementById('r3PromptOut'), 'write steps so clear that Sean can\'t get it wrong!'));
 
   /* ---------------- round 2 : heads up deck ---------------- */
   const DECK = [

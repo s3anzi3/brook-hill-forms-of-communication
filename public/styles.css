@@ -195,6 +195,15 @@ h2{font-size:clamp(1.6rem,4.5vw,2.9rem);line-height:1.08;margin:0 0 14px;font-we
 .prompt-out{margin-top:14px;padding:16px;border-radius:14px;background:rgba(255,209,102,.1);border:1px dashed var(--gold);font-size:1.25rem;font-weight:600;text-align:center;animation:pop .4s ease}
 .prompt-out small{display:block;color:var(--muted);font-weight:400;font-size:.8rem;margin-top:4px}
 
+/* round 3 door task */
+.door-task{display:flex;align-items:stretch;gap:10px;margin:2px 0 18px}
+.door{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;text-align:center;padding:14px 8px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid var(--line);font-weight:600}
+.door small{color:var(--muted);font-weight:400;font-size:.72rem}
+.door.left{border-color:rgba(58,160,255,.5);background:rgba(58,160,255,.08)}
+.door.right{border-color:rgba(255,95,162,.5);background:rgba(255,95,162,.08)}
+.door-mid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-align:center;color:var(--gold);font-size:.78rem;font-weight:600;line-height:1.25}
+.door-mid span{font-size:.72rem}
+
 /* timer ring */
 .timer-col{display:flex;flex-direction:column;align-items:center;gap:16px}
 .timer-shell{position:relative;width:220px;height:220px}
