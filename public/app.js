@@ -241,7 +241,7 @@
     ['Italian Food', ['Pizza', 'Pasta', 'Gelato', 'Lasagna', 'Espresso', 'Tiramisu', 'Cannoli', 'Spaghetti', 'Mozzarella', 'Focaccia', 'Nutella', 'Prosciutto']],
     ['Only in NYC', ['Times Square', 'Statue of Liberty', 'Central Park', 'Empire State Building', 'Brooklyn Bridge', 'Yellow taxi', 'Broadway', 'The subway', 'Hot dog stand', 'Skyscraper']],
     ['Soccer / Calcio', ['Cristiano Ronaldo', 'Lionel Messi', 'Juventus', 'AC Milan', 'Inter Milan', 'Napoli', 'World Cup', 'Penalty kick', 'Goalkeeper', 'Red card']],
-    ['Pop Culture', ['TikTok', 'Instagram', 'Taylor Swift', 'Måneskin', 'Spider-Man', 'Netflix', 'FIFA video game', 'Fortnite', 'Barbie', 'Minecraft']],
+    ['Pop Culture', ['TikTok', 'Instagram', 'Taylor Swift', 'Kanye West', 'Måneskin', 'Spider-Man', 'Netflix', 'FIFA video game', 'Fortnite', 'Barbie', 'Minecraft']],
     ['Italian Icons', ['Ferrari', 'Lamborghini', 'Vespa scooter', 'Gucci', 'Super Mario', 'Pinocchio', 'Mona Lisa', 'Leonardo da Vinci', 'Fiat 500', 'The Pope']],
     ['Easy Warm-ups', ['Dog', 'Cat', 'Sun', 'Guitar', 'Sunglasses', 'Dancing', 'Selfie', 'Airplane', 'Ice cream', 'Beach']],
   ];
