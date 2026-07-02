@@ -220,6 +220,8 @@
     'Push in a chair',
     'Dribble a basketball',
     'Pump up a ball',
+    'Put the basketball in the wagon',
+    'Put the speaker in the wagon',
   ];
   function pick(arr, out, caption) {
     const v = arr[Math.floor(Math.random() * arr.length)];
