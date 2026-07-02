@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forms of Communication — Brook Hill Alliance</title>
+  <meta name="description" content="A team challenge about how we communicate. Boys vs. Girls. Three rounds. No excuses." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ambient animated background -->
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+  </div>
+
+  <!-- persistent scoreboard (hidden until games start) -->
+  <header id="scorebar" class="scorebar" hidden>
+    <button class="team-score boys" data-team="boys" aria-label="Add point to Boys">
+      <span class="ts-emoji">🧢</span>
+      <span class="ts-name">Boys</span>
+      <span class="ts-val" id="scoreBoys">0</span>
+    </button>
+    <div class="scorebar-mid">
+      <div class="round-tag" id="roundTag">Warm-up</div>
+      <button class="mini-reset" id="miniReset" title="Reset scores">reset</button>
+    </div>
+    <button class="team-score girls" data-team="girls" aria-label="Add point to Girls">
+      <span class="ts-emoji">💅</span>
+      <span class="ts-name">Girls</span>
+      <span class="ts-val" id="scoreGirls">0</span>
+    </button>
+  </header>
+
+  <main id="stage">
+
+    <!-- ===================== INTRO ===================== -->
+    <section class="scene active" id="scene-intro">
+      <div class="intro-wrap">
+        <p class="eyebrow reveal">Brook Hill Alliance presents</p>
+        <h1 class="title-huge reveal delay-1">
+          <span class="line">FORMS OF</span>
+          <span class="line accent">COMMUNICATION</span>
+        </h1>
+        <p class="subtitle reveal delay-2">Two teams. Three rounds. One big question:<br><strong>who <em>really</em> communicates better?</strong></p>
+        <button class="btn btn-big reveal delay-3" data-go="present-0">Start the show →</button>
+        <p class="tiny reveal delay-3">A team-building game &nbsp;•&nbsp; keep it fun, keep it kind</p>
+      </div>
+    </section>
+
+    <!-- ===================== PRESENTATION SLIDES ===================== -->
+    <section class="scene present" id="scene-present">
+      <div class="slide-frame">
+        <div class="slides" id="slides">
+
+          <article class="slide" data-slide="0">
+            <span class="kicker">The Debate</span>
+            <h2>Everybody thinks <span class="hl">they're</span> the better communicator.</h2>
+            <p>Ask any table in this room and you'll hear the same thing...</p>
+          </article>
+
+          <article class="slide" data-slide="1">
+            <span class="kicker boys-k">Team Boys, probably 🧢</span>
+            <h2>"We keep it <span class="hl">simple</span>. One word. One nod. Done."</h2>
+            <p>"We don't need paragraphs. A grunt says everything. Efficiency, baby."</p>
+            <div class="chip-row">
+              <span class="chip">🗿 One-word texts</span>
+              <span class="chip">🤜 The head-nod</span>
+              <span class="chip">🎮 Communicating mid-game</span>
+            </div>
+          </article>
+
+          <article class="slide" data-slide="2">
+            <span class="kicker girls-k">Team Girls, probably 💅</span>
+            <h2>"Please. We say what we <span class="hl">mean</span> — with detail."</h2>
+            <p>"We read the room, we read the tone, we read the text you sent <em>three hours ago</em>. We actually listen."</p>
+            <div class="chip-row">
+              <span class="chip">💬 Full context</span>
+              <span class="chip">👀 Reading the room</span>
+              <span class="chip">📖 Storytelling</span>
+            </div>
+          </article>
+
+          <article class="slide" data-slide="3">
+            <span class="kicker">The Twist</span>
+            <h2>Talk is cheap. <span class="hl">Prove it.</span></h2>
+            <p>We're going to test both teams with three challenges where you can't just do it your usual way. Same task, harder mode.</p>
+          </article>
+
+          <article class="slide" data-slide="4">
+            <span class="kicker">The Rules</span>
+            <h2>How it works</h2>
+            <ul class="big-list">
+              <li><b>Split into two teams:</b> Boys vs. Girls.</li>
+              <li>Each round, your team picks <b>one messenger</b> to complete a task.</li>
+              <li>The rest of the team helps — but only how the round <b>allows</b>.</li>
+              <li>Fastest / most correct team wins the round. Track it on the scoreboard.</li>
+            </ul>
+          </article>
+
+          <article class="slide" data-slide="5">
+            <span class="kicker">The Rounds</span>
+            <h2>Three forms of communication</h2>
+            <div class="round-cards">
+              <div class="rc rc-1"><span class="rc-n">1</span><b>No Words</b><small>Hands down. Faces &amp; groans only.</small></div>
+              <div class="rc rc-2"><span class="rc-n">2</span><b>Heads Up</b><small>Describe it without saying it.</small></div>
+              <div class="rc rc-3"><span class="rc-n">3</span><b>Written Only</b><small>Instructions on paper. No talking.</small></div>
+            </div>
+            <button class="btn btn-big" data-go="teams">Pick the teams →</button>
+          </article>
+
+        </div>
+
+        <!-- slide nav -->
+        <div class="slide-nav">
+          <button class="nav-btn" id="prevSlide" aria-label="Previous slide">‹</button>
+          <div class="dots" id="dots"></div>
+          <button class="nav-btn" id="nextSlide" aria-label="Next slide">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TEAMS ===================== -->
+    <section class="scene" id="scene-teams">
+      <div class="center-wrap">
+        <span class="kicker">Line up</span>
+        <h2 class="mb">Two teams, enter the arena</h2>
+        <div class="vs-wrap">
+          <div class="vs-card boys pop"><span class="vs-emoji">🧢</span><b>BOYS</b><small>"Simple &amp; fast"</small></div>
+          <div class="vs-bolt">VS</div>
+          <div class="vs-card girls pop delay-1"><span class="vs-emoji">💅</span><b>GIRLS</b><small>"Clear &amp; detailed"</small></div>
+        </div>
+        <p class="subtitle">Tap a team's name on the scoreboard anytime to give them a point.</p>
+        <button class="btn btn-big" data-go="round1">Begin Round 1 →</button>
+      </div>
+    </section>
+
+    <!-- ===================== ROUND 1 : NO WORDS ===================== -->
+    <section class="scene round" id="scene-round1">
+      <div class="round-wrap">
+        <div class="round-head">
+          <span class="round-badge r1">Round 1</span>
+          <h2>No Words</h2>
+        </div>
+        <div class="round-body">
+          <div class="rules-col">
+            <h3>The challenge</h3>
+            <p>The messenger has to get their team to figure out a <b>secret word or action</b> — but nobody can talk.</p>
+            <ul class="rule-list">
+              <li>✋ <b>Hands stay flat on the table.</b> No pointing, no drawing in the air.</li>
+              <li>😐 Only <b>facial expressions</b> and <b>groans / hums</b> allowed.</li>
+              <li>✅ Agree on one groan for <b>yes</b>, one for <b>no</b>.</li>
+              <li>⏱️ Beat the clock. Correct = point.</li>
+            </ul>
+            <button class="btn ghost" id="r1Prompt">🎲 Give me a secret word</button>
+            <div class="prompt-out" id="r1PromptOut" hidden></div>
+          </div>
+          <div class="timer-col">
+            <div class="timer-shell" id="t1shell">
+              <svg class="ring" viewBox="0 0 120 120">
+                <circle class="ring-bg" cx="60" cy="60" r="54"></circle>
+                <circle class="ring-fg" id="ring1" cx="60" cy="60" r="54"></circle>
+              </svg>
+              <div class="timer-face"><span class="t-num" id="t1num">60</span><span class="t-lbl">seconds</span></div>
+            </div>
+            <div class="timer-btns">
+              <button class="btn small" data-set="1" data-sec="60">60s</button>
+              <button class="btn small" data-set="1" data-sec="90">90s</button>
+              <button class="btn small" data-set="1" data-sec="120">120s</button>
+            </div>
+            <div class="timer-ctrl">
+              <button class="btn play" data-timer="1" data-action="start">▶ Start</button>
+              <button class="btn ghost" data-timer="1" data-action="reset">↺ Reset</button>
+            </div>
+          </div>
+        </div>
+        <div class="round-foot">
+          <button class="btn ghost" data-go="teams">‹ Teams</button>
+          <button class="btn" data-go="round2">Next: Heads Up →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ROUND 2 : HEADS UP ===================== -->
+    <section class="scene round" id="scene-round2">
+      <div class="round-wrap">
+        <div class="round-head">
+          <span class="round-badge r2">Round 2</span>
+          <h2>Heads Up</h2>
+        </div>
+        <div class="round-body">
+          <div class="rules-col">
+            <h3>The challenge</h3>
+            <p>The messenger describes the word on the card so their team <b>says it out loud</b> — without ever saying the word (or any part of it).</p>
+            <ul class="rule-list">
+              <li>🗣️ Talking allowed! Describe, act it out with words, give clues.</li>
+              <li>🚫 Never say the word, rhyme it, or spell it.</li>
+              <li>➡️ Got it? Tap <b>Correct</b>. Stuck? Tap <b>Skip</b>.</li>
+              <li>⏱️ Most correct before time runs out wins.</li>
+            </ul>
+            <div class="score-mini">
+              Got: <b id="huGot">0</b> &nbsp;•&nbsp; Skipped: <b id="huSkip">0</b>
+            </div>
+          </div>
+          <div class="card-col">
+            <div class="hup-card" id="hupCard">
+              <span class="hup-cat" id="hupCat">Category</span>
+              <span class="hup-word" id="hupWord">Tap Start</span>
+            </div>
+            <div class="hup-btns">
+              <button class="btn skip" id="huSkipBtn">✗ Skip</button>
+              <button class="btn play" id="huGotBtn">✓ Correct</button>
+            </div>
+            <div class="hup-timerrow">
+              <div class="mini-timer"><span id="t2num">60</span>s</div>
+              <div class="timer-ctrl">
+                <button class="btn small" data-timer="2" data-action="start" id="hu-start">▶ Start round</button>
+                <button class="btn ghost small" data-timer="2" data-action="reset">↺ Reset</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="round-foot">
+          <button class="btn ghost" data-go="round1">‹ Round 1</button>
+          <button class="btn" data-go="round3">Next: Written →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ROUND 3 : WRITTEN ===================== -->
+    <section class="scene round" id="scene-round3">
+      <div class="round-wrap">
+        <div class="round-head">
+          <span class="round-badge r3">Round 3</span>
+          <h2>Written Only</h2>
+        </div>
+        <div class="round-body">
+          <div class="rules-col">
+            <h3>The challenge</h3>
+            <p>No talking at all. The messenger writes <b>step-by-step instructions</b> on paper so a teammate can complete the task — exactly as written.</p>
+            <ul class="rule-list">
+              <li>✍️ Everything goes on the paper. No talking, no gestures.</li>
+              <li>📄 Teammate must follow the instructions <b>literally</b>.</li>
+              <li>🎯 Clearest instructions = fastest, most accurate result.</li>
+              <li>⏱️ Write within the time, then act it out.</li>
+            </ul>
+            <button class="btn ghost" id="r3Prompt">🎲 Give me a task to write</button>
+            <div class="prompt-out" id="r3PromptOut" hidden></div>
+          </div>
+          <div class="timer-col">
+            <div class="timer-shell" id="t3shell">
+              <svg class="ring" viewBox="0 0 120 120">
+                <circle class="ring-bg" cx="60" cy="60" r="54"></circle>
+                <circle class="ring-fg" id="ring3" cx="60" cy="60" r="54"></circle>
+              </svg>
+              <div class="timer-face"><span class="t-num" id="t3num">120</span><span class="t-lbl">seconds</span></div>
+            </div>
+            <div class="timer-btns">
+              <button class="btn small" data-set="3" data-sec="90">90s</button>
+              <button class="btn small" data-set="3" data-sec="120">120s</button>
+              <button class="btn small" data-set="3" data-sec="180">180s</button>
+            </div>
+            <div class="timer-ctrl">
+              <button class="btn play" data-timer="3" data-action="start">▶ Start</button>
+              <button class="btn ghost" data-timer="3" data-action="reset">↺ Reset</button>
+            </div>
+          </div>
+        </div>
+        <div class="round-foot">
+          <button class="btn ghost" data-go="round2">‹ Round 2</button>
+          <button class="btn" data-go="finale">See the winner →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FINALE ===================== -->
+    <section class="scene" id="scene-finale">
+      <div class="center-wrap">
+        <span class="kicker">Final score</span>
+        <div class="final-scores">
+          <div class="fs boys"><span class="vs-emoji">🧢</span><b>Boys</b><span class="fs-num" id="finalBoys">0</span></div>
+          <div class="fs girls"><span class="vs-emoji">💅</span><b>Girls</b><span class="fs-num" id="finalGirls">0</span></div>
+        </div>
+        <h2 class="winner-line" id="winnerLine">And the winner is…</h2>
+        <div class="moral">
+          <p><b>The real point:</b> nobody "naturally" communicates better. Great communication is a <em>skill</em> — you listen, you stay clear, and you adapt to what the moment needs. Whether it's a groan, a clue, or a written note, the best teams keep trying until the message actually lands.</p>
+        </div>
+        <div class="final-btns">
+          <button class="btn btn-big" data-go="round1">🔁 Play again</button>
+          <button class="btn ghost" data-go="present-0">↩ Back to start</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- confetti layer -->
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <script src="app.js"></script>
+</body>
+</html>
