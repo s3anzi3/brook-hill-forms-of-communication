@@ -226,13 +226,29 @@
   document.getElementById('r1Prompt').addEventListener('click', () =>
     pick(R1_WORDS, document.getElementById('r1PromptOut'), 'keep it secret from the guessers!'));
 
+  // Round 1: show / hide the full task list
+  const r1List = document.getElementById('r1List');
+  R1_WORDS.forEach(w => {
+    const item = document.createElement('span');
+    item.className = 'task-chip';
+    item.textContent = w;
+    r1List.appendChild(item);
+  });
+  const r1Toggle = document.getElementById('r1Toggle');
+  r1Toggle.addEventListener('click', () => {
+    const open = r1List.hidden;
+    r1List.hidden = !open;
+    r1Toggle.setAttribute('aria-expanded', String(open));
+    r1Toggle.textContent = open ? '📋 Hide tasks' : '📋 Show all tasks';
+  });
+
   /* ---------------- round 2 : heads up deck ---------------- */
   const DECK = [
     ['Places in Italy', ['Rome', 'Venice', 'Milan', 'Florence', 'Naples', 'Sicily', 'The Colosseum', 'Leaning Tower of Pisa', 'The Vatican', 'Amalfi Coast', 'Trevi Fountain', 'Gondola']],
     ['Italian Food', ['Pizza', 'Pasta', 'Gelato', 'Lasagna', 'Espresso', 'Tiramisu', 'Cannoli', 'Spaghetti', 'Mozzarella', 'Focaccia', 'Nutella', 'Prosciutto']],
     ['Only in NYC', ['Times Square', 'Statue of Liberty', 'Central Park', 'Empire State Building', 'Brooklyn Bridge', 'Yellow taxi', 'Broadway', 'The subway', 'Hot dog stand', 'Skyscraper']],
     ['Soccer / Calcio', ['Cristiano Ronaldo', 'Lionel Messi', 'Juventus', 'AC Milan', 'Inter Milan', 'Napoli', 'World Cup', 'Penalty kick', 'Goalkeeper', 'Red card']],
-    ['Pop Culture', ['TikTok', 'Instagram', 'Taylor Swift', 'Kanye West', 'Måneskin', 'Spider-Man', 'Netflix', 'FIFA video game', 'Fortnite', 'Barbie', 'Minecraft']],
+    ['Pop Culture', ['TikTok', 'Instagram', 'Taylor Swift', 'Kanye West', '"6-7" (six seven)', 'Måneskin', 'Spider-Man', 'Netflix', 'FIFA video game', 'Fortnite', 'Barbie', 'Minecraft']],
     ['Italian Icons', ['Ferrari', 'Lamborghini', 'Vespa scooter', 'Gucci', 'Super Mario', 'Pinocchio', 'Mona Lisa', 'Leonardo da Vinci', 'Fiat 500', 'The Pope']],
     ['Easy Warm-ups', ['Dog', 'Cat', 'Sun', 'Guitar', 'Sunglasses', 'Dancing', 'Selfie', 'Airplane', 'Ice cream', 'Beach']],
   ];
