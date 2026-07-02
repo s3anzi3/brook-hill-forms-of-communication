@@ -212,7 +212,6 @@
     'Sit in one of the chairs at the middle table in the second row',
     'Sit in the chair closest to the exit door that is open',
     'Sit in the chair closest to the exit door that is closed',
-    'Turn the light switch off and on',
     'Walk out the door',
     'Throw the crumpled paper in the trash',
     'Grab a water bottle and take a sip',
