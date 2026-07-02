@@ -188,10 +188,32 @@
 
   /* ---------------- round 1 & 3 prompt generators ---------------- */
   const R1_WORDS = [
-    'Elephant', 'Sneeze', 'Pizza', 'Basketball', 'Crying', 'Superhero',
-    'Brushing teeth', 'A baby', 'Thunderstorm', 'Winning a race', 'Spicy food',
-    'Falling asleep', 'A cat', 'Roller coaster', 'Birthday cake', 'Ghost',
-    'Swimming', 'Angry teacher', 'Ice cream melting', 'Robot',
+    // physical actions
+    'Do 10 push-ups',
+    'Do 15 jumping jacks',
+    'Shake Sean\'s hand',
+    'Give a teammate a high-five',
+    'Do 5 squats',
+    'Hop on one foot 10 times',
+    'Spin around in a circle 3 times',
+    'Touch your toes',
+    'Do a wall sit for 10 seconds',
+    'Run in place for 10 seconds',
+    'Give someone a fist bump',
+    'Take a bow',
+    // use items around the room
+    'Pick up a chair and move it',
+    'Grab a pencil and put it on the table',
+    'Turn the light switch off and on',
+    'Open the door',
+    'Throw a piece of paper in the trash',
+    'Stack 3 books on top of each other',
+    'Grab a water bottle and take a sip',
+    'Write your name on the whiteboard',
+    'Point to the clock and read the time',
+    'Pick up something red in the room',
+    'Knock on the door 3 times',
+    'Push in a chair',
   ];
   const R3_TASKS = [
     'Make a paper airplane and throw it into a cup.',
