@@ -210,6 +210,8 @@
     'Write your name on the whiteboard',
     'Knock on the door 3 times',
     'Push in a chair',
+    'Dribble a basketball',
+    'Pump up a ball',
   ];
   const R3_TASKS = [
     'Make a paper airplane and throw it into a cup.',
