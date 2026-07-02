@@ -26,24 +26,23 @@
 html,body{margin:0;padding:0}
 body{
   font-family:'Space Grotesk',system-ui,sans-serif;
-  background:
-    radial-gradient(85% 55% at 12% -5%, rgba(168,85,247,.20), transparent 60%),
-    radial-gradient(75% 55% at 90% 8%, rgba(231,199,90,.12), transparent 55%),
-    radial-gradient(90% 70% at 50% 110%, rgba(168,85,247,.14), transparent 60%),
-    var(--bg);
-  background-attachment:fixed;
+  background-color:var(--bg);
   color:var(--ink);
   min-height:100vh;
   overflow-x:hidden;
 }
-
-/* ---------- ambient orbs (BHA gold + violet) ---------- */
-.bg-orbs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.42;animation:float 18s ease-in-out infinite}
-.orb-a{width:44vw;height:44vw;background:var(--purple);top:-10vw;left:-8vw}
-.orb-b{width:36vw;height:36vw;background:var(--gold);bottom:-12vw;right:-6vw;opacity:.28;animation-delay:-6s}
-.orb-c{width:32vw;height:32vw;background:var(--purple-2);top:42%;left:56%;animation-delay:-11s}
-@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(4vw,-3vw) scale(1.12)}}
+/* clean fixed backdrop: faint dot grid on navy + thin gold accent line up top */
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:radial-gradient(rgba(148,163,184,.10) 1px, transparent 1.4px);
+  background-size:26px 26px;
+  -webkit-mask-image:linear-gradient(180deg, rgba(0,0,0,.9), rgba(0,0,0,.35) 60%, rgba(0,0,0,.15));
+  mask-image:linear-gradient(180deg, rgba(0,0,0,.9), rgba(0,0,0,.35) 60%, rgba(0,0,0,.15));
+}
+body::after{
+  content:"";position:fixed;top:0;left:0;right:0;height:4px;z-index:50;pointer-events:none;
+  background:linear-gradient(90deg,var(--gold),var(--gold-2),var(--purple));
+}
 
 /* ---------- scoreboard ---------- */
 .scorebar{
