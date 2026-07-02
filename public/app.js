@@ -318,7 +318,7 @@
   addEventListener('resize', sizeCanvas); sizeCanvas();
 
   function confetti() {
-    const colors = ['#ffd166', '#8b5cf6', '#3aa0ff', '#ff5fa2', '#37d67a'];
+    const colors = ['#E7C75A', '#a855f7', '#3aa0ff', '#ff5fa2', '#4ade80'];
     for (let i = 0; i < 160; i++) {
       pieces.push({
         x: Math.random() * canvas.width,
@@ -352,7 +352,7 @@
     const rect = el.getBoundingClientRect();
     const cx = rect.left + rect.width / 2;
     const cy = rect.top + rect.height / 2;
-    const colors = ['#ffd166', '#8b5cf6', '#37d67a', '#3aa0ff', '#ff5fa2'];
+    const colors = ['#E7C75A', '#a855f7', '#4ade80', '#3aa0ff', '#ff5fa2'];
     for (let i = 0; i < 24; i++) {
       pieces.push({
         x: cx, y: cy, r: 4 + Math.random() * 5,

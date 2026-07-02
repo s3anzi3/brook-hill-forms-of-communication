@@ -1,23 +1,25 @@
 /* ===== Forms of Communication — Brook Hill Alliance ===== */
 :root{
-  --bg:#0c0a1a;
-  --bg2:#141026;
-  --ink:#f4f1ff;
-  --muted:#a79fc9;
-  --gold:#ffd166;
-  --purple:#8b5cf6;
-  --purple-2:#a78bfa;
+  /* Brook Hill Alliance brand: dark navy + gold + violet */
+  --bg:#060611;
+  --bg2:#0d0d1c;
+  --ink:#f8fafc;
+  --muted:#94a3b8;
+  --gold:#E7C75A;
+  --gold-2:#C9A84C;
+  --purple:#a855f7;
+  --purple-2:#c084fc;
   --boys:#3aa0ff;
   --boys-2:#1b6fd6;
   --girls:#ff5fa2;
   --girls-2:#e0357f;
-  --card:#1c1636;
-  --card-2:#241b45;
-  --line:#332a55;
-  --ok:#37d67a;
-  --skip:#ff7a7a;
+  --card:#0d0d1c;
+  --card-2:#14142a;
+  --line:#26263f;
+  --ok:#4ade80;
+  --skip:#fca5a5;
   --radius:20px;
-  --shadow:0 24px 60px rgba(0,0,0,.45);
+  --shadow:0 24px 60px rgba(0,0,0,.55);
 }
 
 *{box-sizing:border-box}
@@ -82,7 +84,7 @@ body{
 /* ---------- typography / shared ---------- */
 .kicker{
   display:inline-block;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--gold);border:1px solid rgba(255,209,102,.35);border-radius:30px;
+  color:var(--gold);border:1px solid rgba(231,199,90,.35);border-radius:30px;
   padding:5px 14px;margin-bottom:18px;
 }
 .kicker.boys-k{color:var(--boys);border-color:rgba(58,160,255,.4)}
@@ -97,16 +99,16 @@ h2{font-size:clamp(1.6rem,4.5vw,2.9rem);line-height:1.08;margin:0 0 14px;font-we
 .btn{
   font-family:inherit;font-weight:600;font-size:1rem;
   border:none;cursor:pointer;border-radius:40px;
-  padding:13px 26px;color:#160f2e;
-  background:linear-gradient(135deg,var(--gold),#ffb703);
-  box-shadow:0 10px 26px rgba(255,183,3,.28);
+  padding:13px 26px;color:#06121a;
+  background:linear-gradient(135deg,var(--gold),var(--gold-2));
+  box-shadow:0 10px 26px rgba(201,168,76,.3);
   transition:transform .12s ease, box-shadow .2s, filter .2s;
 }
 .btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
 .btn:active{transform:translateY(0) scale(.97)}
 .btn-big{font-size:1.15rem;padding:16px 36px;margin-top:14px}
 .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}
-.btn.ghost:hover{border-color:var(--purple-2);background:rgba(139,92,246,.1)}
+.btn.ghost:hover{border-color:var(--purple-2);background:rgba(168,85,247,.1)}
 .btn.small{padding:9px 16px;font-size:.85rem}
 .btn.play{background:linear-gradient(135deg,var(--ok),#12a150);color:#04160b;box-shadow:0 10px 26px rgba(55,214,122,.25)}
 .btn.skip{background:linear-gradient(135deg,#ff9a9a,#ff5f5f);color:#2a0808;box-shadow:0 10px 26px rgba(255,95,95,.22)}
@@ -116,7 +118,7 @@ h2{font-size:clamp(1.6rem,4.5vw,2.9rem);line-height:1.08;margin:0 0 14px;font-we
 .eyebrow{color:var(--purple-2);letter-spacing:.28em;text-transform:uppercase;font-size:.8rem;margin:0 0 10px}
 .title-huge{font-family:'Bebas Neue',sans-serif;font-weight:400;line-height:.92;margin:0;font-size:clamp(3.2rem,15vw,9rem);letter-spacing:.02em}
 .title-huge .line{display:block}
-.title-huge .accent{background:linear-gradient(90deg,var(--boys),var(--purple-2),var(--girls));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 24px rgba(139,92,246,.35))}
+.title-huge .accent{background:linear-gradient(90deg,var(--boys),var(--purple-2),var(--girls));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 24px rgba(168,85,247,.35))}
 .reveal{opacity:0;transform:translateY(20px);animation:revealUp .7s ease forwards}
 .reveal.delay-1{animation-delay:.15s}
 .reveal.delay-2{animation-delay:.3s}
@@ -142,7 +144,7 @@ h2{font-size:clamp(1.6rem,4.5vw,2.9rem);line-height:1.08;margin:0 0 14px;font-we
 .slide p{color:var(--muted);font-size:clamp(1rem,2.6vw,1.25rem);line-height:1.55;max-width:640px;margin:0 auto}
 .kicker+h2{margin-top:4px}
 .chip-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:24px}
-.chip{background:rgba(139,92,246,.14);border:1px solid var(--line);border-radius:30px;padding:9px 16px;font-size:.9rem;color:var(--ink)}
+.chip{background:rgba(168,85,247,.14);border:1px solid var(--line);border-radius:30px;padding:9px 16px;font-size:.9rem;color:var(--ink)}
 .big-list{list-style:none;padding:0;margin:10px auto 0;max-width:560px;text-align:left;display:grid;gap:12px}
 .big-list li{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:13px 16px;color:var(--muted);font-size:1.02rem}
 .big-list b{color:var(--ink)}
@@ -153,7 +155,7 @@ h2{font-size:clamp(1.6rem,4.5vw,2.9rem);line-height:1.08;margin:0 0 14px;font-we
 .rc small{color:var(--muted);font-size:.8rem;line-height:1.3}
 .rc-n{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;margin-bottom:4px}
 .rc-1 .rc-n{background:rgba(58,160,255,.2);color:var(--boys)}
-.rc-2 .rc-n{background:rgba(255,209,102,.2);color:var(--gold)}
+.rc-2 .rc-n{background:rgba(231,199,90,.2);color:var(--gold)}
 .rc-3 .rc-n{background:rgba(255,95,162,.2);color:var(--girls)}
 
 .slide-nav{display:flex;align-items:center;gap:18px;margin-top:22px}
@@ -173,7 +175,7 @@ h2{font-size:clamp(1.6rem,4.5vw,2.9rem);line-height:1.08;margin:0 0 14px;font-we
 .vs-card.boys{background:linear-gradient(150deg,var(--boys),var(--boys-2))}
 .vs-card.girls{background:linear-gradient(150deg,var(--girls),var(--girls-2))}
 .vs-emoji{font-size:2.6rem}
-.vs-bolt{font-family:'Bebas Neue',sans-serif;font-size:2.4rem;color:var(--gold);text-shadow:0 4px 20px rgba(255,209,102,.4)}
+.vs-bolt{font-family:'Bebas Neue',sans-serif;font-size:2.4rem;color:var(--gold);text-shadow:0 4px 20px rgba(231,199,90,.4)}
 .pop{opacity:0;animation:pop .55s cubic-bezier(.2,1.3,.4,1) forwards}
 .pop.delay-1{animation-delay:.18s}
 @keyframes pop{from{opacity:0;transform:scale(.6) translateY(20px)}to{opacity:1;transform:none}}
@@ -183,7 +185,7 @@ h2{font-size:clamp(1.6rem,4.5vw,2.9rem);line-height:1.08;margin:0 0 14px;font-we
 .round-head{display:flex;align-items:center;gap:14px;margin-bottom:20px}
 .round-badge{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.08em;padding:6px 14px;border-radius:30px}
 .round-badge.r1{background:rgba(58,160,255,.2);color:var(--boys)}
-.round-badge.r2{background:rgba(255,209,102,.2);color:var(--gold)}
+.round-badge.r2{background:rgba(231,199,90,.2);color:var(--gold)}
 .round-badge.r3{background:rgba(255,95,162,.2);color:var(--girls)}
 .round-head h2{margin:0}
 .round-body{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:start}
@@ -192,7 +194,7 @@ h2{font-size:clamp(1.6rem,4.5vw,2.9rem);line-height:1.08;margin:0 0 14px;font-we
 .rule-list{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:9px}
 .rule-list li{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;padding:11px 13px;font-size:.94rem;color:var(--muted);line-height:1.4}
 .rule-list b{color:var(--ink)}
-.prompt-out{margin-top:14px;padding:16px;border-radius:14px;background:rgba(255,209,102,.1);border:1px dashed var(--gold);font-size:1.25rem;font-weight:600;text-align:center;animation:pop .4s ease}
+.prompt-out{margin-top:14px;padding:16px;border-radius:14px;background:rgba(231,199,90,.1);border:1px dashed var(--gold);font-size:1.25rem;font-weight:600;text-align:center;animation:pop .4s ease}
 .prompt-out small{display:block;color:var(--muted);font-weight:400;font-size:.8rem;margin-top:4px}
 
 /* round 3 door task */
@@ -238,7 +240,7 @@ h2{font-size:clamp(1.6rem,4.5vw,2.9rem);line-height:1.08;margin:0 0 14px;font-we
 .score-mini{margin-top:8px;color:var(--muted);font-size:.95rem;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;padding:10px 14px;text-align:center}
 .score-mini b{color:var(--ink)}
 .hup-timerrow{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;width:100%}
-.mini-timer{font-family:'Bebas Neue',sans-serif;font-size:2rem;background:rgba(255,209,102,.12);color:var(--gold);border-radius:12px;padding:4px 16px}
+.mini-timer{font-family:'Bebas Neue',sans-serif;font-size:2rem;background:rgba(231,199,90,.12);color:var(--gold);border-radius:12px;padding:4px 16px}
 .mini-timer.danger{color:var(--girls);background:rgba(255,95,162,.12);animation:pulse .6s infinite}
 
 .round-foot{display:flex;justify-content:space-between;margin-top:24px;gap:12px}
@@ -251,7 +253,7 @@ h2{font-size:clamp(1.6rem,4.5vw,2.9rem);line-height:1.08;margin:0 0 14px;font-we
 .fs b{font-size:1.2rem}
 .fs-num{font-family:'Bebas Neue',sans-serif;font-size:3.6rem;line-height:1}
 .fs.win{outline:3px solid var(--gold);outline-offset:4px;animation:winGlow 1.4s ease infinite}
-@keyframes winGlow{0%,100%{box-shadow:0 0 0 rgba(255,209,102,.5)}50%{box-shadow:0 0 40px rgba(255,209,102,.55)}}
+@keyframes winGlow{0%,100%{box-shadow:0 0 0 rgba(231,199,90,.5)}50%{box-shadow:0 0 40px rgba(231,199,90,.55)}}
 .winner-line{margin:6px 0 18px}
 .moral{max-width:640px;margin:0 auto 24px;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:16px;padding:20px 22px}
 .moral p{color:var(--muted);line-height:1.6;margin:0}
