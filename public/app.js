@@ -221,6 +221,7 @@
     'Pump up a ball',
     'Put the basketball in the wagon',
     'Put the speaker in the wagon',
+    'Put the sign on the clipboard',
   ];
   function pick(arr, out, caption) {
     const v = arr[Math.floor(Math.random() * arr.length)];
