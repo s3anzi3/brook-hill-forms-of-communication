@@ -237,13 +237,13 @@
 
   /* ---------------- round 2 : heads up deck ---------------- */
   const DECK = [
-    ['Animals', ['Penguin', 'Giraffe', 'Kangaroo', 'Octopus', 'Cheetah', 'Hedgehog', 'Dolphin', 'Owl', 'Flamingo', 'Squirrel']],
-    ['Food', ['Spaghetti', 'Pancakes', 'Watermelon', 'Popcorn', 'Sushi', 'Tacos', 'Ice cream', 'Pretzel', 'Cotton candy', 'Cheeseburger']],
-    ['Movies & TV', ['Spider-Man', 'Frozen', 'Minecraft', 'The Lion King', 'SpongeBob', 'Star Wars', 'Toy Story', 'Harry Potter', 'Encanto', 'Sonic']],
-    ['Sports', ['Basketball', 'Soccer', 'Swimming', 'Skateboarding', 'Baseball', 'Gymnastics', 'Tennis', 'Boxing', 'Volleyball', 'Bowling']],
-    ['Places', ['Beach', 'Library', 'Airport', 'Zoo', 'Hospital', 'Amusement park', 'Grocery store', 'Gym', 'Movie theater', 'Museum']],
-    ['Actions', ['Dancing', 'Sneezing', 'Yawning', 'Laughing', 'Whispering', 'Juggling', 'Tiptoeing', 'Snoring', 'Clapping', 'Stretching']],
-    ['Objects', ['Umbrella', 'Toothbrush', 'Backpack', 'Sunglasses', 'Alarm clock', 'Skateboard', 'Headphones', 'Flashlight', 'Guitar', 'Basketball hoop']],
+    ['Places in Italy', ['Rome', 'Venice', 'Milan', 'Florence', 'Naples', 'Sicily', 'The Colosseum', 'Leaning Tower of Pisa', 'The Vatican', 'Amalfi Coast', 'Trevi Fountain', 'Gondola']],
+    ['Italian Food', ['Pizza', 'Pasta', 'Gelato', 'Lasagna', 'Espresso', 'Tiramisu', 'Cannoli', 'Spaghetti', 'Mozzarella', 'Focaccia', 'Nutella', 'Prosciutto']],
+    ['Only in NYC', ['Times Square', 'Statue of Liberty', 'Central Park', 'Empire State Building', 'Brooklyn Bridge', 'Yellow taxi', 'Broadway', 'The subway', 'Hot dog stand', 'Skyscraper']],
+    ['Soccer / Calcio', ['Cristiano Ronaldo', 'Lionel Messi', 'Juventus', 'AC Milan', 'Inter Milan', 'Napoli', 'World Cup', 'Penalty kick', 'Goalkeeper', 'Red card']],
+    ['Pop Culture', ['TikTok', 'Instagram', 'Taylor Swift', 'Måneskin', 'Spider-Man', 'Netflix', 'FIFA video game', 'Fortnite', 'Barbie', 'Minecraft']],
+    ['Italian Icons', ['Ferrari', 'Lamborghini', 'Vespa scooter', 'Gucci', 'Super Mario', 'Pinocchio', 'Mona Lisa', 'Leonardo da Vinci', 'Fiat 500', 'The Pope']],
+    ['Easy Warm-ups', ['Dog', 'Cat', 'Sun', 'Guitar', 'Sunglasses', 'Dancing', 'Selfie', 'Airplane', 'Ice cream', 'Beach']],
   ];
   const flatDeck = [];
   DECK.forEach(([cat, words]) => words.forEach(w => flatDeck.push({ cat, word: w })));
