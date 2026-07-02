@@ -16,9 +16,9 @@
   const roundTag = document.getElementById('roundTag');
 
   const TAGS = {
-    intro: 'Warm-up', present: 'Warm-up', teams: 'Line up',
-    round1: 'Round 1 · No Words', round2: 'Round 2 · Heads Up',
-    round3: 'Round 3 · Written', finale: 'Final',
+    intro: 'Start', present: 'Start', teams: 'Teams',
+    round1: 'Game 1 · No Words', round2: 'Game 2 · Heads Up',
+    round3: 'Game 3 · Write It', finale: 'Final',
   };
   const SHOW_BAR = ['teams', 'round1', 'round2', 'round3', 'finale'];
 
@@ -226,23 +226,19 @@
     out.hidden = false;
     out.innerHTML = v + '<small>' + caption + '</small>';
   }
-  document.getElementById('r1Prompt').addEventListener('click', () =>
-    pick(R1_WORDS, document.getElementById('r1PromptOut'), 'keep it secret from the guessers!'));
-
-  // Round 1: show / hide the full task list
-  const r1List = document.getElementById('r1List');
-  R1_WORDS.forEach(w => {
-    const item = document.createElement('span');
-    item.className = 'task-chip';
-    item.textContent = w;
-    r1List.appendChild(item);
-  });
+  // Round 1: receive ONE random task, then hide/show it on screen
+  const r1Out = document.getElementById('r1PromptOut');
   const r1Toggle = document.getElementById('r1Toggle');
+  document.getElementById('r1Prompt').addEventListener('click', () => {
+    pick(R1_WORDS, r1Out, 'do not show your team!');
+    r1Out.hidden = false;
+    r1Toggle.hidden = false;
+    r1Toggle.textContent = '🙈 Hide task';
+  });
   r1Toggle.addEventListener('click', () => {
-    const open = r1List.hidden;
-    r1List.hidden = !open;
-    r1Toggle.setAttribute('aria-expanded', String(open));
-    r1Toggle.textContent = open ? '📋 Hide tasks' : '📋 Show all tasks';
+    const showing = !r1Out.hidden;
+    r1Out.hidden = showing;
+    r1Toggle.textContent = showing ? '👁 Show task' : '🙈 Hide task';
   });
 
   /* ---------------- round 2 : heads up deck ---------------- */
@@ -314,13 +310,13 @@
     bCard.classList.remove('win'); gCard.classList.remove('win');
     const line = document.getElementById('winnerLine');
     if (score.boys === score.girls) {
-      line.textContent = 'It\'s a tie — turns out both teams can talk! 🤝';
+      line.textContent = 'It\'s a tie! Both teams are good! 🤝';
     } else if (score.boys > score.girls) {
-      line.textContent = 'Team Boys take it — barely 🧢🏆';
+      line.textContent = 'Boys win! 🧢🏆';
       bCard.classList.add('win');
       confetti();
     } else {
-      line.textContent = 'Team Girls run it up 💅🏆';
+      line.textContent = 'Girls win! 💅🏆';
       gCard.classList.add('win');
       confetti();
     }
