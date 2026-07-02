@@ -123,12 +123,20 @@
   const timers = {
     1: { num: 't1num', ring: 'ring1', shell: 't1shell', total: 60, left: 60, id: null },
     2: { num: 't2num', ring: null,    shell: null,       total: 60, left: 60, id: null },
-    3: { num: 't3num', ring: 'ring3', shell: 't3shell', total: 120, left: 120, id: null },
+    3: { num: 't3num', ring: 'ring3', shell: 't3shell', total: 420, left: 420, id: null },
   };
+
+  function formatTime(s) {
+    if (s < 60) return String(s);
+    const m = Math.floor(s / 60);
+    const ss = String(s % 60).padStart(2, '0');
+    return m + ':' + ss;
+  }
 
   function paintTimer(k) {
     const t = timers[k];
-    document.getElementById(t.num).textContent = t.left;
+    // ring timers (rounds 1 & 3) show m:ss; the round-2 mini timer stays plain seconds
+    document.getElementById(t.num).textContent = t.ring ? formatTime(t.left) : t.left;
     if (t.ring) {
       const frac = t.total ? t.left / t.total : 0;
       document.getElementById(t.ring).style.strokeDashoffset = CIRC * (1 - frac);
@@ -214,26 +222,26 @@
     'Pump up a ball',
   ];
   const R3_TASKS = [
-    'Make a paper airplane and throw it into a cup.',
-    'Draw a house with a sun, a tree, and a dog.',
-    'Build a 3-cup pyramid, then knock it down.',
-    'Fold a shirt and stack it on the chair.',
-    'Tie two shoelaces together in a bow.',
-    'Stack 5 objects tallest to shortest.',
-    'Draw your teammate\'s face — no peeking at them.',
-    'Set the table for two: plate, cup, napkin, spoon.',
-    'Make the letter "B" out of any objects on the table.',
-    'Do 3 jumping jacks, spin once, then sit down.',
+    'Get Sean to make a paper airplane and throw it in the trash.',
+    'Get Sean to draw a house with a sun, a tree, and a dog.',
+    'Get Sean to build a 3-cup stack, then knock it down.',
+    'Get Sean to do 3 jumping jacks, spin once, then sit down.',
+    'Get Sean to draw a smiley face on the whiteboard.',
+    'Get Sean to put on a jacket and zip it all the way up.',
+    'Get Sean to stack 5 objects tallest to shortest.',
+    'Get Sean to walk to the door, knock twice, and come back.',
+    'Get Sean to make the letter "B" out of objects on the table.',
+    'Get Sean to pour a cup of water and take one sip.',
   ];
-  function pick(arr, out) {
+  function pick(arr, out, caption) {
     const v = arr[Math.floor(Math.random() * arr.length)];
     out.hidden = false;
-    out.innerHTML = v + '<small>keep it secret from the guessers!</small>';
+    out.innerHTML = v + '<small>' + caption + '</small>';
   }
   document.getElementById('r1Prompt').addEventListener('click', () =>
-    pick(R1_WORDS, document.getElementById('r1PromptOut')));
+    pick(R1_WORDS, document.getElementById('r1PromptOut'), 'keep it secret from the guessers!'));
   document.getElementById('r3Prompt').addEventListener('click', () =>
-    pick(R3_TASKS, document.getElementById('r3PromptOut')));
+    pick(R3_TASKS, document.getElementById('r3PromptOut'), 'write steps so clear that Sean can\'t get it wrong!'));
 
   /* ---------------- round 2 : heads up deck ---------------- */
   const DECK = [

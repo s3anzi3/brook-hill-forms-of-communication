@@ -166,7 +166,7 @@
                 <circle class="ring-bg" cx="60" cy="60" r="54"></circle>
                 <circle class="ring-fg" id="ring1" cx="60" cy="60" r="54"></circle>
               </svg>
-              <div class="timer-face"><span class="t-num" id="t1num">60</span><span class="t-lbl">seconds</span></div>
+              <div class="timer-face"><span class="t-num" id="t1num">1:00</span><span class="t-lbl">remaining</span></div>
             </div>
             <div class="timer-btns">
               <button class="btn small" data-set="1" data-sec="60">60s</button>
@@ -242,14 +242,14 @@
         <div class="round-body">
           <div class="rules-col">
             <h3>The challenge</h3>
-            <p>No talking at all. The messenger writes <b>step-by-step instructions</b> on paper so a teammate can complete the task — exactly as written.</p>
+            <p>No talking at all. Your team writes <b>step-by-step instructions</b> on paper for one person — <b>Sean</b>. Sean will follow them <b>exactly as written</b>, like a robot, so every detail counts.</p>
             <ul class="rule-list">
-              <li>✍️ Everything goes on the paper. No talking, no gestures.</li>
-              <li>📄 Teammate must follow the instructions <b>literally</b>.</li>
-              <li>🎯 Clearest instructions = fastest, most accurate result.</li>
-              <li>⏱️ Write within the time, then act it out.</li>
+              <li>✍️ Everything goes on the paper. No talking, no gestures, no pointing.</li>
+              <li>🤖 <b>Sean does only what the paper says</b> — literally, step by step.</li>
+              <li>🎯 Left something vague? Sean will get it "wrong." Be precise.</li>
+              <li>⏱️ <b>7 minutes</b> to write. Then hand it to Sean and watch.</li>
             </ul>
-            <button class="btn ghost" id="r3Prompt">🎲 Give me a task to write</button>
+            <button class="btn ghost" id="r3Prompt">🎲 Give me a task for Sean</button>
             <div class="prompt-out" id="r3PromptOut" hidden></div>
           </div>
           <div class="timer-col">
@@ -258,12 +258,12 @@
                 <circle class="ring-bg" cx="60" cy="60" r="54"></circle>
                 <circle class="ring-fg" id="ring3" cx="60" cy="60" r="54"></circle>
               </svg>
-              <div class="timer-face"><span class="t-num" id="t3num">120</span><span class="t-lbl">seconds</span></div>
+              <div class="timer-face"><span class="t-num" id="t3num">7:00</span><span class="t-lbl">remaining</span></div>
             </div>
             <div class="timer-btns">
-              <button class="btn small" data-set="3" data-sec="90">90s</button>
-              <button class="btn small" data-set="3" data-sec="120">120s</button>
-              <button class="btn small" data-set="3" data-sec="180">180s</button>
+              <button class="btn small" data-set="3" data-sec="300">5 min</button>
+              <button class="btn small" data-set="3" data-sec="420">7 min</button>
+              <button class="btn small" data-set="3" data-sec="600">10 min</button>
             </div>
             <div class="timer-ctrl">
               <button class="btn play" data-timer="3" data-action="start">▶ Start</button>
